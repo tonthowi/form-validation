@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Form Validation</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <form name="myForm" onsubmit=" return validateForm()">
+        <div class="group">
+          <input type="text" name="name">
+          <label>Name</label>
+          <span class="error-text" id="error-name">Text</span>
+        </div>
+        
+        <div class="group">
+          <input type="email" name="email">
+          <label>Email</label>
+          <span class="error-text" id="error-email"></span>
+        </div>
+
+        <div class="group">
+            <input type="password" name="password">
+            <label>Password</label>
+            <span class="error-text" id="error-password"></span>
+          </div>
+
+        <input type="submit" value="Register" class="primary-btn">
+      </form>
+
+    <script src="js/validate.js"></script>
+</body>
+</html>
