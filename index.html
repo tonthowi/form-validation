@@ -8,28 +8,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"> 
 </head>
 <body>
-    <form name="myForm" onsubmit=" return validateForm()">
+    <form name="myForm" onsubmit=" return validateForm()" method="POST" action="https://formspree.io/xyynqwqk">
         <div class="group">
           <input type="text" name="name">
           <label>Name</label>
-          <span class="error-text" id="error-name">Text</span>
+          <span class="error-text" id="nameError"></span>
         </div>
         
         <div class="group">
-          <input type="email" name="email">
+          <input type="text" name="email">
           <label>Email</label>
-          <span class="error-text" id="error-email"></span>
+          <span class="error-text" id="emailError"></span>
+        </div>
+
+        <div class="group">
+          <input type="text" name="mobile">
+          <label>Mobile Number</label>
+          <span class="error-text" id="mobileError"></span>
         </div>
 
         <div class="group">
             <input type="password" name="password">
             <label>Password</label>
-            <span class="error-text" id="error-password"></span>
-          </div>
+            <span class="error-text" id="passError"></span>
+        </div>
+
+        <div class="group">
+          <input type="password" name="retypePassword">
+          <label> Retype Password</label>
+          <span class="error-text" id="retypePassError"></span>
+      </div>
 
         <input type="submit" value="Register" class="primary-btn">
       </form>
-
+    
+    <div class="data-preview" id="dataPreview"></div>
     <script src="js/validate.js"></script>
 </body>
 </html>
